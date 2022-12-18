@@ -3,11 +3,16 @@ import { BlogService } from './blog.service';
 import { Blog } from 'src/models/blog';
 
 @Controller('blog')
-export class AppController {
-  constructor(private readonly appService: BlogService) {}
+export class BlogController {
+  constructor(private readonly blogService: BlogService) {}
+
+  @Get()
+  getBlogs(): Blog[] {
+    return this.blogService.getBlogs();
+  }
 
   @Get(':id')
   getBlogById(@Param('id') id: number): Blog {
-    return this.appService.getBlogById(id);
+    return this.blogService.getBlogById(id);
   }
 }

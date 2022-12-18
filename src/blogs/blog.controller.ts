@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { BlogService } from './blog.service';
 import { Blog } from 'src/models/blog';
 
-@Controller('home')
+@Controller('blog')
 export class AppController {
   constructor(private readonly appService: BlogService) {}
 

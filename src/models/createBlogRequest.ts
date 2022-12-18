@@ -1,8 +1,6 @@
-export interface Blog {
-  id: number;
+export interface ICreateBlogRequest {
   title: string;
   author: string;
   date: string;
   commentCount: number;
-  img?: string;
 }

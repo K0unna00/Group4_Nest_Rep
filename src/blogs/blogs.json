@@ -2,40 +2,40 @@
     "blogs":[
         {
             "id": 1,
-            "title": "sss",
-            "author": "sdsd",
+            "title": "35 Stellar Graphic Design Blogs to Keep You Educated and Inspired",
+            "author": "Cristofer Westervelt",
             "date": "January 25, 2021",
             "commentCount": 10,
             "img": "sdsd"
         },
         {
             "id": 2,
-            "title": "sss",
-            "author": "sdsd",
+            "title":"How to set up Square Online store: a step-by-step guide",  
+            "author": "Cristofer Westervelt",
             "date": "January 25, 2021",
             "commentCount": 10,
             "img": "sdsd"
         },
-        {
+        { 
             "id": 3,
-            "title": "sss",
-            "author": "sdsd",
+            "title":  "Memphis Design: the defining look of the 1980s",
+            "author": "Cristofer Westervelt",
             "date": "January 25, 2021",
             "commentCount": 10,
             "img": "sdsd"
         },
         {
             "id": 4,
-            "title": "sss",
-            "author": "sdsd",
+            "title": "These 3 tips helped RollWorks find the perfect designer on 99designs",
+            "author": "Cristofer Westervelt",
             "date": "January 25, 2021",
             "commentCount": 10,
             "img": "sdsd"
         },
         {
             "id": 5,
-            "title": "sss",
-            "author": "sdsd",
+            "title": "What is Design Thinking and how does it create innovation?",
+            "author": "Cristofer Westervelt",
             "date": "January 25, 2021",
             "commentCount": 10,
             "img": "sdsd"

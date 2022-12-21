@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Blog } from 'src/models/blog';
 import blogsJson from './blogs.json';
-import { ICreateBlogRequest } from 'src/models/createBlogRequest';
+// import { ICreateBlogRequest } from 'src/models/createBlogRequest';
 
 const blogs = blogsJson.blogs;
 

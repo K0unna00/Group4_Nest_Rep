@@ -9,9 +9,9 @@ import { UsersService } from './users.service';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  @Post()
-  createProduct(@Body() request: RegisterUserRequest): number {
-    console.debug(request);
+  @Post('/register')
+  createUser(@Body() request: RegisterUserRequest): number {
+    console.log(request);
     return this.usersService.register(request);
   }
 
@@ -29,5 +29,10 @@ export class UsersController {
   @Post('login')
   test(@Body() request: LoginRequest): User {
     return this.usersService.login(request);
+  }
+
+  @Get('getUsers')
+  getUsers(): User[] {
+    return this.usersService.getUsers();
   }
 }

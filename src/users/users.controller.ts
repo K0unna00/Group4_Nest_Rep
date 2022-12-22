@@ -22,12 +22,12 @@ export class UsersController {
       firstName: 'John',
       lastName: 'Doe',
       id: 42,
-      password: '',
+      password: '22',
     };
   }
 
-  @Post('/login')
-  login(@Body() request: LoginRequest): User {
+  @Post('login')
+  test(@Body() request: LoginRequest): User {
     return this.usersService.login(request);
   }
 }

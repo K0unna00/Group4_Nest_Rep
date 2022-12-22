@@ -6,28 +6,28 @@ import { User } from 'src/models/user';
 const users: User[] = [
   {
     id: 42,
-    email: 'John@mail.com',
+    email: 'John@gmail.com',
     firstName: 'John',
     lastName: 'Doe',
     password: '12345678',
   },
   {
     id: 43,
-    email: 'Elnare@mail.com',
+    email: 'Elnare@gmail.com',
     firstName: 'Elnare',
     lastName: 'Vahabova',
     password: '12345678',
   },
   {
     id: 44,
-    email: 'Davqin@mail.com',
+    email: 'Davqin@gmail.com',
     firstName: 'Davqin',
     lastName: 'Abdulla',
     password: '12345678',
   },
   {
     id: 45,
-    email: 'Bexi@mail.com',
+    email: 'Bexi@gmail.com',
     firstName: 'Sirin',
     lastName: 'Bexi',
     password: '12345678',
@@ -44,8 +44,10 @@ export class UsersService {
   }
 
   login(request: LoginRequest): User | undefined {
-    return users.find(
+    // console.log(request);
+    const response = users.find(
       (u) => u.password === request.password && u.email === request.email,
     );
+    return response;
   }
 }

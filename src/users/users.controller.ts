@@ -18,7 +18,7 @@ export class UsersController {
   @Get('/current')
   getCurrentUser(): User {
     return {
-      email: 'mail@mail.com',
+      email: 'mail@gmail.com',
       firstName: 'John',
       lastName: 'Doe',
       id: 42,

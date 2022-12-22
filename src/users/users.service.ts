@@ -39,6 +39,7 @@ export class UsersService {
   register(userInfo: RegisterUserRequest): number {
     const newId = users.length ? users[users.length - 1].id + 1 : 1;
     const user: User = { id: newId, ...userInfo };
+    // console.log(userInfo);
     users.push(user);
     return newId;
   }
@@ -49,5 +50,9 @@ export class UsersService {
       (u) => u.password === request.password && u.email === request.email,
     );
     return response;
+  }
+
+  getUsers(): User[] {
+    return users;
   }
 }

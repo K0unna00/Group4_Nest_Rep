@@ -1,14 +1,36 @@
 import { Injectable } from '@nestjs/common';
+import { LoginRequest } from 'src/models/loginRequest';
 import { RegisterUserRequest } from 'src/models/registerUserRequest';
 import { User } from 'src/models/user';
 
 const users: User[] = [
   {
     id: 42,
-    email: 'example2@mail.com',
+    email: 'John@mail.com',
     firstName: 'John',
     lastName: 'Doe',
-    password: '1234',
+    password: '12345678',
+  },
+  {
+    id: 43,
+    email: 'Elnare@mail.com',
+    firstName: 'Elnare',
+    lastName: 'Vahabova',
+    password: '12345678',
+  },
+  {
+    id: 44,
+    email: 'Davqin@mail.com',
+    firstName: 'Davqin',
+    lastName: 'Abdulla',
+    password: '12345678',
+  },
+  {
+    id: 45,
+    email: 'Bexi@mail.com',
+    firstName: 'Sirin',
+    lastName: 'Bexi',
+    password: '12345678',
   },
 ];
 
@@ -21,7 +43,9 @@ export class UsersService {
     return newId;
   }
 
-  getUser(login: string, password: string): User | undefined {
-    return users.find((u) => u.email === login && u.password === password);
+  login(request: LoginRequest): User | undefined {
+    return users.find(
+      (u) => u.password === request.password && u.email === request.email,
+    );
   }
 }

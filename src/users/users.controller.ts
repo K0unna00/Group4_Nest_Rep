@@ -1,5 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { Get } from '@nestjs/common/decorators';
+import { LoginRequest } from 'src/models/loginRequest';
 import { RegisterUserRequest } from 'src/models/registerUserRequest';
 import { User } from 'src/models/user';
 import { UsersService } from './users.service';
@@ -23,5 +24,10 @@ export class UsersController {
       id: 42,
       password: '',
     };
+  }
+
+  @Post('/login')
+  login(@Body() request: LoginRequest): User {
+    return this.usersService.login(request);
   }
 }
